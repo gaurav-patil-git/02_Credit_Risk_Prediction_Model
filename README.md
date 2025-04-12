@@ -5,7 +5,7 @@
 ## 🔗 Project Demonstration
 ### Demo GIF
 
-![Recording](https://github.com/user-attachments/assets/f06aa5ea-9289-4471-8606-2b3dc683328b)
+![Risk](https://github.com/user-attachments/assets/7a61388b-0fb9-4f4c-98d5-33ea1ae6592e)
 
 ## 🪪 Credits
 
@@ -54,15 +54,17 @@ _Note: This project scope is limited to Phase 1. A detailed Phase 1 walkthrough 
 To manage the project activities and transform ML Lifecycle into a smooth kanban board workflow, we utilized Jira by Atlassian.
 
 ### 🗓️ Kanban Board
-![3 Jira](https://github.com/user-attachments/assets/3a89e732-aa48-456d-a40a-82f788d1e8e4)
+![3 Jira](https://github.com/user-attachments/assets/586fbfe9-934a-4eb5-93da-c01411a101b9)
+
 
 ## Data Collection
 
-![4 Jira](https://github.com/user-attachments/assets/0e77064a-dd22-483c-bf4d-d836d76dd770)
+![4 Jira](https://github.com/user-attachments/assets/83b083fd-d6c5-423e-9706-4885f119bc6e)
 
-![5 Jira](https://github.com/user-attachments/assets/5ddc6b85-a268-4967-b148-ea553e086200)
+![5 Jira](https://github.com/user-attachments/assets/dfa13b9a-be7c-4240-8052-5b609e3468cf)
 
-![6 Jira](https://github.com/user-attachments/assets/a347ef8a-d52e-4f05-990b-bf5af6c75e12)
+![6 Jira](https://github.com/user-attachments/assets/294f2c5e-e009-405e-9cec-736e25689ef6)
+
 
 ## 📊 Data Understanding
 ### Raw Data Overview:
@@ -115,9 +117,10 @@ To manage the project activities and transform ML Lifecycle into a smooth kanban
 
 ### Data Quality Assessment:
 ### Kanban View:
-![8 Jira](https://github.com/user-attachments/assets/56fcffac-1902-4bcf-b733-0201286ec26f)
+![8 Jira](https://github.com/user-attachments/assets/919e1890-ff0e-45ed-abee-dc536f42c17b)
 
-![Screenshot 2025-04-11 143859](https://github.com/user-attachments/assets/e0f8ee1c-df19-4a40-b981-93f5d06bf7d7)
+![Screenshot 2025-04-11 143859](https://github.com/user-attachments/assets/32a32f67-6d84-43ca-ba81-d002f5761fde)
+
 
 
 ```
@@ -245,9 +248,9 @@ df_test['loan_purpose'].unique()
 ```
 ## Exploratory Data Analysis
 ### Kanban View:
-![9 Jira](https://github.com/user-attachments/assets/7ffb428e-75d2-47f2-b813-3a7aeafeace6)
+![9 Jira](https://github.com/user-attachments/assets/0480cbc4-8c78-415a-93ed-2896f39d4570)
 
-![Screenshot 2025-04-11 144151](https://github.com/user-attachments/assets/755c7506-82ef-45ca-b2bb-47f6d2f4b048)
+![Screenshot 2025-04-11 144151](https://github.com/user-attachments/assets/8f751134-80ca-439f-8931-f75c7c980f12)
 
 
 ```
@@ -289,9 +292,9 @@ plt.show()
 
 ## 🔧 Feature Engineering
 ### Kanban View:
-![10 Jira](https://github.com/user-attachments/assets/8bb5bcf7-c155-45b3-b2f9-d4f61df3f927)
+![10 Jira](https://github.com/user-attachments/assets/6e599c80-0a41-451c-94d6-02c2688e64b5)
 
-![Screenshot 2025-04-11 144740](https://github.com/user-attachments/assets/cf3e03c9-9f3a-4c45-9cbd-2700d78db239)
+![Screenshot 2025-04-11 144740](https://github.com/user-attachments/assets/a789fca0-79bb-4991-9b0c-a2e063bcda5e)
 
 
 ### Generate Loan to Income (LTI) Ratio
@@ -485,9 +488,9 @@ X_test_encoded = pd.get_dummies(X_test_reduced, drop_first=True)
 ```
 ## Model Development
 ### Kanban View:
-![11 Jira](https://github.com/user-attachments/assets/972b6abb-a8db-4712-b872-554aa790c1db)
+![11 Jira](https://github.com/user-attachments/assets/f7b06d11-f591-49fb-afe2-2c4b566c66f0)
 
-![Screenshot 2025-04-11 144908](https://github.com/user-attachments/assets/be407bac-b4ca-4615-9416-e4fc798bf76d)
+![Screenshot 2025-04-11 144908](https://github.com/user-attachments/assets/3cde8b49-3cd8-4631-b0ca-fce5da87ed29)
 
 
 ### Attempt 1
@@ -897,9 +900,9 @@ dump(model_data, 'artifacts/model_data.joblib')
 ## Streamlit Application
 ### Kanban View:
 
-![12 Jira](https://github.com/user-attachments/assets/27dcc1d9-5049-4e3a-9dd6-290195cc4ee3)
+![12 Jira](https://github.com/user-attachments/assets/294b8798-c523-4d05-b00f-999d01e14809)
 
-![Screenshot 2025-04-11 145142](https://github.com/user-attachments/assets/97e8c241-a1b6-4e86-a481-4f6ba4294844)
+![Screenshot 2025-04-11 145142](https://github.com/user-attachments/assets/547ab9e5-a60d-42cd-b861-349d1ead7e1c)
 
 
 ### Prediction Helper:
