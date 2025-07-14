@@ -48,23 +48,14 @@ _Note: This project scope is limited to Phase 1. A detailed Phase 1 walkthrough 
 | Model Training       | Scikit-learn, XGBoost               |
 | Model Fine Tuning    | Optuna                              |
 | UI Frontend          | Streamlit                           |
-| Project Management   | Jira (Kandan Board)                 |
 
 ## Jira (Kandan Board)
 To manage the project activities and transform ML Lifecycle into a smooth kanban board workflow, we utilized Jira by Atlassian.
 
-### 🗓️ Kanban Board
-![3 Jira](https://github.com/user-attachments/assets/586fbfe9-934a-4eb5-93da-c01411a101b9)
-
-
 ## Data Collection
-
-![4 Jira](https://github.com/user-attachments/assets/83b083fd-d6c5-423e-9706-4885f119bc6e)
-
-![5 Jira](https://github.com/user-attachments/assets/dfa13b9a-be7c-4240-8052-5b609e3468cf)
-
-![6 Jira](https://github.com/user-attachments/assets/294f2c5e-e009-405e-9cec-736e25689ef6)
-
+1. Customer Data was collected from **Internal CRM Team**
+2. Load Data was collected from **Loan Operations Team**
+3. Bureau Data was collected from CIBIL via **Credit Underwriting Team**
 
 ## 📊 Data Understanding
 ### Raw Data Overview:
@@ -116,10 +107,13 @@ To manage the project activities and transform ML Lifecycle into a smooth kanban
 | credit_utilization_ratio  | Percentage of available credit being used (0-100%) | Integer   |
 
 ### Data Quality Assessment:
-### Kanban View:
-![8 Jira](https://github.com/user-attachments/assets/919e1890-ff0e-45ed-abee-dc536f42c17b)
 
-![Screenshot 2025-04-11 143859](https://github.com/user-attachments/assets/32a32f67-6d84-43ca-ba81-d002f5761fde)
+Performed the following data sanitation steps to ensure data quality for EDA and feature engineering:
+1. Check Data Types - Validate and correct data types for each column
+2. Handle Duplicate Records - Identify and remove duplicate rows.
+3. Handle Missing Values - Detect nulls and decide whether to impute, drop, or flag based on context.
+4. Fix Structural Errors - Correct typos and inconsistent formatting
+5. Handle Outliers - Detect and address anomalies using statistical method
 
 
 
@@ -247,10 +241,14 @@ print("Unique values in Loan Purpose column - df_test")
 df_test['loan_purpose'].unique()
 ```
 ## Exploratory Data Analysis
-### Kanban View:
-![9 Jira](https://github.com/user-attachments/assets/0480cbc4-8c78-415a-93ed-2896f39d4570)
+Instructions from **Senior Data Scientist**:
 
-![Screenshot 2025-04-11 144151](https://github.com/user-attachments/assets/8f751134-80ca-439f-8931-f75c7c980f12)
+> Skip traditional univariate and bivariate analysis.
+> Instead, perform the KDE-based approach to identify strong predictors.
+1. Use Kernel Density Estimation (KDE) - Analyze the distribution of each continuous feature using KDE plots.
+2. Group by Target Variable - Plot KDEs for each numeric feature grouped by the target variable to observe class-wise distribution.
+3. Identify Strong Predictors - Highlight features where the KDE plots show clear separation between target classes. These features are considered potential strong predictors.
+4. Document Insights - Summarize key features with class separation and tag them for feature selection or further modeling.
 
 
 ```
