@@ -49,9 +49,6 @@ _Note: This project scope is limited to Phase 1. A detailed Phase 1 walkthrough 
 | Model Fine Tuning    | Optuna                              |
 | UI Frontend          | Streamlit                           |
 
-## Jira (Kandan Board)
-To manage the project activities and transform ML Lifecycle into a smooth kanban board workflow, we utilized Jira by Atlassian.
-
 ## Data Collection
 1. Customer Data was collected from **Internal CRM Team**
 2. Load Data was collected from **Loan Operations Team**
@@ -289,11 +286,14 @@ plt.show()
 3. Why loan_amount and income did not give any signs of being strong predictors? May be when we combine these two and get loan to income ratio (LTI), that may have influence on the target variable. We will explore more later.
 
 ## 🔧 Feature Engineering
-### Kanban View:
-![10 Jira](https://github.com/user-attachments/assets/6e599c80-0a41-451c-94d6-02c2688e64b5)
 
-![Screenshot 2025-04-11 144740](https://github.com/user-attachments/assets/a789fca0-79bb-4991-9b0c-a2e063bcda5e)
-
+Perform the following feature engineering steps to enhance model performance and reduce multicollinearity:
+- Feature Creation - Derive new features from existing ones to enhance model performance.
+- Feature Scaling - Normalize or standardize numerical features for consistent scale across variables.
+- Check VIF (Variance Inflation Factor) - Measure multicollinearity between features and drop those with high VIF.
+- Feature Selection - Select relevant features based on statistical tests, domain knowledge, or model-based techniques.
+- Calculate WOE (Weight of Evidence) & IV (Information Value) - Assess predictive power of categorical features for binary classification tasks.
+- Feature Encoding - Convert categorical variables using appropriate encoding techniques.
 
 ### Generate Loan to Income (LTI) Ratio
 ```
@@ -485,11 +485,13 @@ X_train_encoded = pd.get_dummies(X_train_reduced, drop_first=True)
 X_test_encoded = pd.get_dummies(X_test_reduced, drop_first=True)
 ```
 ## Model Development
-### Kanban View:
-![11 Jira](https://github.com/user-attachments/assets/f7b06d11-f591-49fb-afe2-2c4b566c66f0)
 
-![Screenshot 2025-04-11 144908](https://github.com/user-attachments/assets/3cde8b49-3cd8-4631-b0ca-fce5da87ed29)
-
+Perform multiple modeling attempts to compare performance, handle class imbalance, and optimize parameters for the best predictive model.
+- Attempt 1 (No handling of class imbalance): Logistic Regression, Random Forest, XGBoost
+- Attempt 2 (Handle class imbalance using Under Sampling): Logistic Regression, XGBoost
+- Attempt 3 (Handle class imbalance using SMOTE Tomek & parameter tuning using Optuna): Logistic Regression
+- Attempt 4 (Handle class imbalance using SMOTE Tomek & parameter tuning using Optuna): XGBoost
+- Model Evaluation Metrics: ROC/AUC Curve, Rank Ordering, KS Statistic, Gini Coefficient
 
 ### Attempt 1
 1. Logistic Regression, RandomForest & XGB
@@ -896,11 +898,7 @@ model_data = {
 dump(model_data, 'artifacts/model_data.joblib')
 ```
 ## Streamlit Application
-### Kanban View:
-
-![12 Jira](https://github.com/user-attachments/assets/294b8798-c523-4d05-b00f-999d01e14809)
-
-![Screenshot 2025-04-11 145142](https://github.com/user-attachments/assets/547ab9e5-a60d-42cd-b861-349d1ead7e1c)
+Build a Streamlit application as **Minimal Viable Product (MVP)** to demonstrate model predictions and calculate risk for end-users.
 
 
 ### Prediction Helper:
