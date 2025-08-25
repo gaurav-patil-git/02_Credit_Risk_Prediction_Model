@@ -24,6 +24,8 @@ This project aims to develop a machine learning product to help loan officers in
 
 <h2><a class="anchor" id="model-preview"></a>🔗 Model Preview</h2>
 
+![Model Preview](https://github.com/gaurav-patil-git/02_Default_Risk_Prediction_Model/blob/main/visuals/Risk.gif)
+
 <h2><a class="anchor" id="credits"></a>🪪 Credits</h2>
 
 This capstone project is a part of the “_Master Machine Learning for Data Science & AI: Beginner to Advanced_” course offered by **Codebasics** - All rights reserved.
